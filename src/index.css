@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#hog-tile{
+  border: 3px solid black;
+  margin: 2em;
+  display: inline-grid;
+  text-align: center;
+}
+
+#hog-img{
+  margin: 1em;
+}
