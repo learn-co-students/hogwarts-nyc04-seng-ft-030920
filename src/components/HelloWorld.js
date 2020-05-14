@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Component } from "react";
 
-class HelloWorld extends React.Component {
+class HelloWorld extends Component {
   render() {
     return (
-      <>
+      <div>
         <h1>Hello World</h1>
-      </>
+      </div>
     );
   }
 }
