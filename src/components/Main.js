@@ -1,6 +1,7 @@
 import React from "react";
-
 import HogContainer from "./HogContainer";
+import Filter from "./Filter";
+import Sorting from "./Sorting";
 
 class Main extends React.Component {
 
@@ -36,44 +37,12 @@ class Main extends React.Component {
       <div>
 
         <div>
-          <form>
-              <b>Filter Hogs: </b>
-              <div id="grease-radio">
-                <input type="radio" name="filter" id="greased" value="greased" 
-                        checked={this.state.choice === 'greased'} 
-                        onChange={this.handleFilterChange} />
-                <label htmlFor="greased"> Greased</label>
-              </div> 
-              <div id="grease-radio">
-                <input type="radio" name="filter" id="not-greased" value="not-greased" 
-                        checked={this.state.choice === 'not-greased'} 
-                        onChange={this.handleFilterChange} />
-                <label htmlFor="not-greased"> Not Greased</label>
-              </div> 
-              <div id="grease-radio">
-                <input type="radio" name="filter" id="all-hogs" value="all" 
-                          checked={this.state.choice === 'all'} 
-                          onChange={this.handleFilterChange} />
-                  <label htmlFor="all-hogs"> All</label> 
-                  </div>
-              </form> 
-        </div>
-        <div>
-          <form>
-            <b>Sort By: </b>
-            <div id="grease-radio">
-              <input type="radio" name="sort" id="by-name" value="by-name" 
-                        checked={this.state.sorting === 'by-name'}
-                        onChange={this.handleSortChange} />
-              <label htmlFor="by-name">By Name</label>
-            </div>
-            <div id="grease-radio">
-              <input type="radio" name="sort" id="by-weight" value="by-weight"
-                          checked={this.state.sorting === 'by-weight'}
-                          onChange={this.handleSortChange} />
-              <label htmlFor="by-weight">By Weight</label>
-            </div>
-          </form>
+          <Filter 
+            handleFilterChange={this.handleFilterChange}
+            choice={this.state.choice} />
+            <Sorting 
+            handleSortChange={this.handleSortChange}
+            sorting={this.state.sorting} />
         </div>
 
         <HogContainer
