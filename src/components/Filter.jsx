@@ -1,10 +1,9 @@
 import React from "react";
-import HogContainer from "./HogContainer";
 
 class Filter extends React.Component {
     render(){
         return(
-            <div>
+            <div id="filter-form">
                 <form>
               <b>Filter Hogs: </b>
               <div id="grease-radio">

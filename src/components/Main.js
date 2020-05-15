@@ -16,35 +16,36 @@ class Main extends React.Component {
   }
 
   handleFilterChange = changeEvent => {
+    console.log('hi gabby')
     let val = changeEvent.target.value;
     this.setState({
       choice: val
     });
-    console.log(val)
   }
 
   handleSortChange = changeEvent => {
+    console.log('hi gabby')
     let val = changeEvent.target.value;
     this.setState({
       sorting: val
     });
-    console.log(val)
   }
 
   render() {
 
     return (
       <div>
-
-        <div>
+         <div id="current-choices">Currently displaying <b>{ this.state.choice }</b> hogs and sorting them <b>{ this.state.sorting.split('-').join(' ') }</b>. </div>
+        <div id="change-display">
           <Filter 
             handleFilterChange={this.handleFilterChange}
-            choice={this.state.choice} />
+            choice={this.state.choice} /> 
             <Sorting 
             handleSortChange={this.handleSortChange}
             sorting={this.state.sorting} />
-        </div>
+            </div>
 
+            <div id="spacer"> </div>
         <HogContainer
         choice={this.state.choice} 
         sorting={this.state.sorting} />

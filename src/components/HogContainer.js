@@ -50,7 +50,7 @@ class HogContainer extends React.Component {
 
     if(this.props.choice === 'greased') {
       return (
-        <div>
+        <div id="hog-container">
             { greased.map((hog) => {
   
                   return <HogTile 

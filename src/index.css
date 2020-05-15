@@ -24,6 +24,23 @@ body {
   text-transform: capitalize;
 }
 
+#sort-form{
+  float: right;
+  margin-bottom: 2em;
+}
+
+#filter-form{
+  float: left;
+  margin-bottom: 2em;
+}
+
+#current-choices{ 
+  margin-bottom: 2em;
+}
+#spacer{
+  height: 80px;
+}
+
 #center {
   align: center;
   margin: 1em;
