@@ -11,37 +11,26 @@ class Main extends React.Component {
       choice: 'all',
       sorting: 'by-name'
     }
-    this.handleFilterChange = this.handleFilterChange.bind(this);
-    this.handleSortChange = this.handleSortChange.bind(this);
   }
 
-  handleFilterChange = changeEvent => {
+  handleChange = changeEvent => {
     console.log('hi gabby')
-    let val = changeEvent.target.value;
     this.setState({
-      choice: val
-    });
-  }
-
-  handleSortChange = changeEvent => {
-    console.log('hi gabby')
-    let val = changeEvent.target.value;
-    this.setState({
-      sorting: val
-    });
+      [changeEvent.target.name]: changeEvent.target.value
+    })
   }
 
   render() {
 
     return (
       <div>
-         <div id="current-choices">Currently displaying <b>{ this.state.choice }</b> hogs and sorting them <b>{ this.state.sorting.split('-').join(' ') }</b>. </div>
+         <div id="current-choices">Currently displaying <b>{ this.state.choice.split("-").join(" ") }</b> hogs and sorting them <b>{ this.state.sorting.split('-').join(' ') }</b>. </div>
         <div id="change-display">
           <Filter 
-            handleFilterChange={this.handleFilterChange}
+            handleFilterChange={this.handleChange}
             choice={this.state.choice} /> 
             <Sorting 
-            handleSortChange={this.handleSortChange}
+            handleSortChange={this.handleChange}
             sorting={this.state.sorting} />
             </div>
 

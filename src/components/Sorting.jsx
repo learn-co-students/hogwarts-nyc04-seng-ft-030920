@@ -7,13 +7,13 @@ class Sorting extends React.Component {
               <form>
             <b>Sort By: </b>
             <div id="grease-radio">
-              <input type="radio" name="sort" id="by-name" value="by-name" 
+              <input type="radio" name="sorting" id="by-name" value="by-name" 
                         checked={this.props.sorting === 'by-name'}
                         onChange={this.props.handleSortChange} />
               <label htmlFor="by-name"> By Name</label>
             </div>
             <div id="grease-radio">
-              <input type="radio" name="sort" id="by-weight" value="by-weight"
+              <input type="radio" name="sorting" id="by-weight" value="by-weight"
                           checked={this.props.sorting === 'by-weight'}
                           onChange={this.props.handleSortChange} />
               <label htmlFor="by-weight"> By Weight</label>
